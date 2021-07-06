@@ -1,5 +1,5 @@
 <?php
-$MyUrl = "https://localhost/myfile_lab05/KAMIZONO-SOTSUSEI-TOCHU";
+$MyUrl = "https://localhost/myfile_lab05/aberumomopas-try2";
 require_once __DIR__ . "../../functions.php";
 
 
