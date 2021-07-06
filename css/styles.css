@@ -11847,7 +11847,8 @@ p {
 #mainNav .navbar-brand {
   color: #fff;
 
-  #mainNav .navbar-nav .nav-item .nav-link {
+}
+#mainNav .navbar-nav .nav-item .nav-link {
     color: #fff;
     font-weight: 800;
   }
@@ -11993,4 +11994,45 @@ p {
 
   .address strong {
     font-size: 1.2rem;
+  }
+
+
+  /* note表示用 */
+  #message {
+    display: flex;
+    justify-content: space-between
+  }
+
+  #message p img {
+    display: none;
+  }
+
+  #message a.btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+  }
+
+  #message .mu {
+    width: 23%;
+    position: relative
+  }
+
+  #message .mu img {
+    width: 100%;
+    height: auto
+  }
+
+  #message .mu h3 {
+    margin-bottom: 1em;
+    font-size: 1.3rem;
+    text-align: left;
+    font-weight: normal
+  }
+
+  #message .mu small {
+    display: block
   }

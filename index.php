@@ -1,16 +1,19 @@
 <?php
+
 include("./config/link.php");
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Business Casual - Start Bootstrap Theme</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <meta name="description" content="動物虐待のない世界を目指しています。d" />
+  <title>ANIMAL POLICE FUKUOKA</title>
+  <link rel="icon" type="image/x-icon" href="assets/fav.svg" />
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
   <!-- Google fonts-->
@@ -18,6 +21,19 @@ include("./config/link.php");
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
+
+  <!-- OGPTwitterシェアとかで表示されるよ -->
+
+  <meta property="og:url" content="ページのURL" />
+  <meta property="og:title" content="ANIMAL POLICE FUKUOKA" />
+  <meta property="og:type" content="websit">
+  <meta property="og:description" content="記事の抜粋" />
+  <meta property="og:image" content="画像のURL" />
+  <meta name="twitter:card" content="Summary Card" />
+  <meta name="twitter:site" content="@Twitterユーザー名" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="fb:app_id" content="appIDを入力" />
 </head>
 
 <body>
@@ -28,18 +44,17 @@ include("./config/link.php");
     </h1>
   </header>
   <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4 sticky-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">ANIMAL POLICE FUKUOKA</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.php">ホーム</a></li>
-          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="about.html">わたしたち</a></li>
-          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="products.html">活動報告</a></li>
-          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">寄付•グッズ</a></li>
-          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">SOS</a></li>
-          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="store.html">お問合わせ</a></li>
+          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="visitor/activity.php">活動報告</a></li>
+          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="visitor/donate.php">寄付•グッズ</a></li>
+          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="visitor/transfer.php">譲渡会</a></li>
+          <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="visitor/contact.php">お問合わせ</a></li>
         </ul>
       </div>
     </div>
@@ -69,7 +84,10 @@ include("./config/link.php");
               <span class="section-heading-upper">Our Promise</span>
               <span class="section-heading-lower">To You</span>
             </h2>
-            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with
+              friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest
+              quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make
+              things right!</p>
           </div>
         </div>
       </div>
@@ -88,10 +106,41 @@ include("./config/link.php");
     <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
   </footer>
 
+  <div id="message"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
+
+  <!-- noteの取得 -->
+  <script>
+    // HTMLドキュメントの解析後に実行
+    window.addEventListener('DOMContentLoaded', function() {
+      // XMLHttpRequestのインスタンスを作成
+      let req = new XMLHttpRequest();
+
+      // 読み込み時の処理を設定
+      req.onreadystatechange = function() {
+        // readyState=4は全てのデータを受信済み、
+        // status=200は正常に処理されたことを意味します
+        if (req.readyState == 4 && req.status == 200) {
+          // 結果を代入
+          document.getElementById("message").innerHTML = req.responseText;
+        }
+      }
+
+      // 接続先のURLやメソッドを設定します
+      req.open("GET", "visitor/note.php");
+
+      // リクエストをサーバに送信
+      req.send();
+
+    })
+  </script>
 </body>
 
 </html>
