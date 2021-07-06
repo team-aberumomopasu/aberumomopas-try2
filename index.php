@@ -134,7 +134,7 @@ include("./config/link.php");
       }
 
       // 接続先のURLやメソッドを設定します
-      req.open("GET", "visitor/note.php");
+      req.open("GET", "config/note.php");
 
       // リクエストをサーバに送信
       req.send();

@@ -4,7 +4,7 @@
 date_default_timezone_set('Asia/Tokyo');
 
 // 取得したいRSSのURLを設定
-$url = "https://note.com/seyanote/rss";
+$url = "https://note.com/animal_police/rss";
 // MAXの表示件数を設定
 $max = 3;
 
