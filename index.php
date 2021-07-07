@@ -152,31 +152,44 @@ if ($status == false) {
 					<h2><span class="title">メッセージ</span></h2>
 				</header>
 				<div class="innerS">
-					<p class="masseage_parent">
-						「かわいそう」
-						だけじゃ
-						命は救えない
-					</p>
-					<p>
-						「国の偉大さ道徳的発展は、その国における動物の扱い方でわかる」
+
+					<div class="masseage_parent">
+						<p class="masseage_sub_title">
+							「かわいそう」
+							だけじゃ
+							命は救えない
+						</p>
+						<p>
+							「かわいそう」だけど何もしない人が多いのも現実です。
+							つい最近まで私も後者の立場でした。
+							仕事をしながら寄付やボランティアをするのは限界があります。
+							でも、このままじゃ何も変わらない・・・
+						</p>
+					</div>
+
+					<div class="masseage_parent">
+						<p class="masseage_sub_title">
+							「国の偉大さ道徳的発展は、
+						</p>
+						<p class="masseage_sub_title">
+							その国における動物の扱い方でわかる」
+						</p>
 						私が感銘を受けた言葉の一つです。
 						動物虐待、殺処分ともになくならない動物後進国の日本。
 						保護、啓発活動に尽力している人がいる一方で
-						「かわいそう」だけど何もしない人が多いのも現実です。
-						つい最近まで私も後者の立場でした。
-						仕事をしながら寄付やボランティアをするのは限界があります。
-						でも、このままじゃ何も変わらない・・・
 						思い切って仕事を辞め、この団体を立ち上げました。
-					<p class="masseage_parent">
-						本当にセカイを変えたいなら行動するしかない。
-					</p>
-					<p>
-						皆さんの思いを背負って虐待、殺処分撲滅に取り組んでいきます。
-						活動に賛同してくださる方はサポートをお願いします。
-					</p>
+					</div>
 
+					<div class="masseage_parent">
+						<p class="masseage_sub_title">
+							本当にセカイを変えたいなら行動するしかない。
+						</p>
+						<p>
+							皆さんの思いを背負って虐待、殺処分撲滅に取り組んでいきます。
+							活動に賛同してくださる方はサポートをお願いします。
+						</p>
+					</div>
 
-					</p>
 				</div>
 			</section>
 			<!-- // MESSAGE -->
@@ -234,9 +247,9 @@ if ($status == false) {
 							<p class="img"><img src="admin/transfer/<?= $result[2]['image'] ?>" width="168" height="168" alt=""></p>
 						</li>
 					</ul>
+					<a href="<?= link_transfer ?>">詳しくはこちら</a>
 				</div>
 
-				<a href="<?= link_transfer ?>">詳しくはこちら</a>
 
 			</section>
 			<!-- // BRAND -->
