@@ -86,6 +86,8 @@ fieldset {
 
 :root {
 	--main: #003473;
+	--main_light: #eef5ff;
+
 	--white: #fff;
 }
 
@@ -147,7 +149,10 @@ input:focus {
 h1,
 h2 {
 	font-weight: bold;
+	position: relative;
 }
+
+
 
 img {
 	max-width: 100%;
@@ -169,6 +174,17 @@ section h2 {
 section h2 span {
 	padding-bottom: 20px;
 	border-bottom: 3px solid #000;
+	position: relative;
+
+}
+
+section h2 span:after {
+	position: absolute;
+	content: " ";
+	display: block;
+	border-bottom: solid 3px var(--main_light);
+	bottom: -3px;
+	width: 20%;
 }
 
 .inner {
