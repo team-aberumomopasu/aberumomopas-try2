@@ -24,7 +24,7 @@ if ($rss = simplexml_load_file($url)) {
     if ($cnt >= $max) break;
 
     // 日付の表記の設定
-    $date = date('Y年m月d', strtotime($item->pubDate));
+    $date = date('Y年m月d日', strtotime($item->pubDate));
     // 出力するHTML
     $output .= '<div class="mu">';
     $output .= '<img src="' . $item->children('media', true)->thumbnail . '">';
