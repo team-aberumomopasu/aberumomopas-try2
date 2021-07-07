@@ -87,22 +87,27 @@ fieldset {
 :root {
 	--main: #003473;
 	--main_light: #eef5ff;
-
 	--white: #fff;
 }
 
 
 body {
 	margin: 0;
-	font-family:'Noto Sans JP',
-	sans-serif;
+	font-family: 'Noto Sans JP',
+		sans-serif;
 	color: var(--main);
 	background-color: var(--white);
+	letter-spacing: 0.05em;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-
+span[class^="material"] {
+	/* セレクタ名の前方一致 */
+	margin: 0 10px 0 0;
+	position: relative;
+	top: 6px;
+}
 
 a {
 	color: #0066ff;
@@ -125,11 +130,11 @@ input:focus {
 /* ヘッダー
 ------------------------------------------------------------*/
 #mainnav a {
-		color: var(--main);
+	color: var(--main);
 	font-family: 'Modern Antiqua', 'Noto Sans JP', serif;
 }
 
-#sidebar_title{
+#sidebar_title {
 	font-weight: 700;
 }
 
@@ -146,12 +151,28 @@ input:focus {
 
 /* 共通
 ------------------------------------------------------------*/
-h1,
+
+
 h2 {
-	font-weight: bold;
+	margin: 0 0 16px 0;
+	border-bottom: solid 3px #cce4ff;
 	position: relative;
+	font-weight: bold;
+	padding: 0 0 70px 0;
+	letter-spacing: 0.3em
+
+
 }
 
+
+h2::after {
+	position: absolute;
+	content: " ";
+	display: block;
+	border-bottom: solid 3px #5472cd;
+	bottom: -3px;
+	width: 20%;
+}
 
 
 img {
@@ -159,32 +180,15 @@ img {
 	height: auto;
 }
 
-section {
-	clear: both;
-}
 
-section h2 {
+
+h2 {
 	width: 60%;
 	margin: 70px auto;
-	font-size: 22px;
-	font-weight: normal;
 	text-align: center;
-}
+	font-size: 2em;
 
-section h2 span {
-	padding-bottom: 20px;
-	border-bottom: 3px solid #000;
-	position: relative;
 
-}
-
-section h2 span:after {
-	position: absolute;
-	content: " ";
-	display: block;
-	border-bottom: solid 3px var(--main_light);
-	bottom: -3px;
-	width: 20%;
 }
 
 .inner {
@@ -193,15 +197,23 @@ section h2 span:after {
 	padding-bottom: 50px;
 }
 
-#sec03 .inner,
-#sec04 .inner {
-	border-bottom: 1px solid #a0a0a0;
-}
+
 
 .innerS {
 	width: 60%;
 	margin: 0 auto;
 	padding-bottom: 80px;
+}
+
+
+/* SEC01 Galler */
+
+.masseage_parent {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 16px 0;
+	letter-spacing: 0.1em;
+
 }
 
 
@@ -529,21 +541,6 @@ section h2 span:after {
 		font-weight: 400;
 	}
 
-	#mainnav li a:before {
-		display: block;
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 5px;
-		width: 6px;
-		height: 6px;
-		margin: -4px 0 0 0;
-		border-top: solid 2px #000;
-		border-right: solid 2px #000;
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-	}
-
 	#mainnav #sns {
 		display: flex;
 		align-items: center;
@@ -686,6 +683,6 @@ section h2 span:after {
 }
 
 /*シェアボタン*/
-.clearfi{
+.clearfi {
 	display: flex;
 }

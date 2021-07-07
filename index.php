@@ -1,7 +1,18 @@
 <?php
 
-include("./config/link.php");
-
+include("functions.php");
+include("config/link.php");
+$pdo = connect_to_db();
+$sql = "SELECT * FROM Transfer_table ORDER BY id DESC LIMIT 3";
+$stmt = $pdo->prepare($sql);
+$status = $stmt->execute();
+if ($status == false) {
+	$error = $stmt->errorInfo();
+	echo json_encode(["error_msg" => "{$error[2]}"]);
+	exit();
+} else {
+	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
 
 <!Doctype html>
@@ -13,7 +24,7 @@ include("./config/link.php");
 	<meta name="viewport" content="width=device-width">
 	<title>ANIMAL POLICE FUKUOKA</title>
 	<link rel="stylesheet" media="all" href="css/apf_style.css">
-	<link href="https://fonts.googleapis.com/css?family=Material+Rounded" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Google fonts-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,12 +100,29 @@ include("./config/link.php");
 					<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
 					<div class="panel">
 						<ul>
-							<li><a href="#top">トップ</a></li>
-							<li><a href="#sec01">メッセージ</a></li>
-							<li><a href="#sec02">活動報告</a></li>
-							<li><a href="#sec03">譲渡会</a></li>
-							<li><a href="#sec04">お問合わせ</a></li>
-							<li><a href="#sec05">会社概要</a></li>
+							<li><a href="#top"><span class="material-icons">
+										home
+									</span>トップ</a></li>
+							<li><a href="#sec01">
+									<span class="material-icons">
+										emoji_flags
+									</span>
+									メッセージ</a>
+							</li>
+							<li><a href="#sec02"><span class="material-icons">
+										import_contacts
+									</span>活動報告</a></li>
+							<li><a href="#sec03">
+									<span class="material-icons">
+										pets
+									</span>里親募集</a></li>
+							<li><a href="#sec04"><span class="material-icons">
+										email
+									</span>お問合わせ</a></li>
+							<li><a href="#sec05">
+									<span class="material-icons">
+										place
+									</span>会社概要</a></li>
 						</ul>
 						<!-- <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.php">ホーム</a></li>
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="visitor/activity.php">活動報告</a></li>
@@ -119,13 +147,35 @@ include("./config/link.php");
 		<div id="content">
 			<p id="mainImg"><img src="images/top.jpg" alt="dog"></p>
 			<!-- MESSAGE -->
-			<section id=" sec01">
+			<section id="sec01">
 				<header>
-					<h2><span>メッセージ</span></h2>
+					<h2><span class="title">メッセージ</span></h2>
 				</header>
 				<div class="innerS">
+					<p class="masseage_parent">
+						「かわいそう」
+						だけじゃ
+						命は救えない
+					</p>
 					<p>
-						アニマルポリスを本気で作りたいと思い、10年勤めた新聞社を今年１月に退社。ボランティアではなく、仕事として成り立たせるためにはIT、プログラミング、起業について学ぶ必要があると感じ、現在の専門学校へ。卒業時の10月には団体を立ち上げたいと思っている。私が小学生の頃、近所のおじさんが飼い犬を殺してしまう悲しい出来事がありました。無抵抗のまま暴行を受け、お腹がパンパンの状態で亡くなっていたそうです。大型犬だったので本気で抵抗すれば飼い主を噛むことも逃げることもできたはずなのに、それをしなかったあの子の気持ちを思うと今でも涙が出ます。飼い犬を虐待しても殺しても殺処分しても罪に問われていない人はたくさんいます。そんな日本を少しでも変えていきたい。これがアニマルポリスを作りたいと思った最大の理由です。
+						「国の偉大さ道徳的発展は、その国における動物の扱い方でわかる」
+						私が感銘を受けた言葉の一つです。
+						動物虐待、殺処分ともになくならない動物後進国の日本。
+						保護、啓発活動に尽力している人がいる一方で
+						「かわいそう」だけど何もしない人が多いのも現実です。
+						つい最近まで私も後者の立場でした。
+						仕事をしながら寄付やボランティアをするのは限界があります。
+						でも、このままじゃ何も変わらない・・・
+						思い切って仕事を辞め、この団体を立ち上げました。
+					<p class="masseage_parent">
+						本当にセカイを変えたいなら行動するしかない。
+					</p>
+					<p>
+						皆さんの思いを背負って虐待、殺処分撲滅に取り組んでいきます。
+						活動に賛同してくださる方はサポートをお願いします。
+					</p>
+
+
 					</p>
 				</div>
 			</section>
@@ -133,7 +183,7 @@ include("./config/link.php");
 
 			<section id="sec02">
 				<header>
-					<h2><span>活動報告</span></h2>
+					<h2><span class="title">活動報告</span></h2>
 				</header>
 				<div class="innerS">
 					<p>
@@ -169,36 +219,34 @@ include("./config/link.php");
 			<!-- BRAND -->
 			<section id="sec03">
 				<header>
-					<h2><span>譲渡会</span></h2>
+					<h2><span class="title">譲渡会</span></h2>
 				</header>
-				<div class="inner">
+				<div class="innerS">
+
 					<ul class="col4">
 						<li>
-							<p class="img"><img src="images/logo01.png" width="168" height="168" alt=""></p>
-							<p>ホームページサンプル株式会社では最動かす企業を目指します。</p>
+							<p class="img"><img src="admin/transfer/<?= $result[0]['image'] ?>" width="168" height="168" alt=""></p>
 						</li>
 						<li>
-							<p class="img"><img src="images/logo02.png" width="168" height="168" alt=""></p>
-							<p>革新的な技術で世の中を動かす企業を目します。世の中を動かす。</p>
+							<p class="img"><img src="admin/transfer/<?= $result[1]['image'] ?>" width="168" height="168" alt=""></p>
 						</li>
 						<li>
-							<p class="img"><img src="images/logo03.png" width="168" height="168" alt=""></p>
-							<p>株式会社では最動かす企業を目指しますージン企業を目指します。</p>
-						</li>
-						<li>
-							<p class="img"><img src="images/logo04.png" width="168" height="168" alt=""></p>
-							<p>株式会社では最動かす企業を指しますージサン企業を目指します。</p>
+							<p class="img"><img src="admin/transfer/<?= $result[2]['image'] ?>" width="168" height="168" alt=""></p>
 						</li>
 					</ul>
 				</div>
+
+				<a href="<?= link_transfer ?>">詳しくはこちら</a>
+
 			</section>
 			<!-- // BRAND -->
 			<!-- PROJECT -->
 			<section id="sec04">
 				<header>
-					<h2><span>お問合わせ</span></h2>
+					<h2><span class="title">お問合わせ</span></h2>
 				</header>
-				<div class="inner">
+				<div class="innerS">
+
 					<div class="article">
 						<img src="images/photo14.jpg" width="370" height="224" alt="">
 						<p>ホームページ・運営に関するお問い合わせはこちら</p>
@@ -218,9 +266,9 @@ include("./config/link.php");
 			<!-- COMPANY -->
 			<section id="sec05">
 				<header>
-					<h2><span>会社概要</span></h2>
+					<h2><span class="title">会社概要</span></h2>
 				</header>
-				<div class="inner">
+				<div class="innerS">
 					<ul class="col2">
 						<li>
 							<p>〒201-1071<br>福岡県福岡市中央区区にこにこ町1-2-999</p>
