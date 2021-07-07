@@ -160,8 +160,6 @@ h2 {
 	font-weight: bold;
 	padding: 0 0 70px 0;
 	letter-spacing: 0.3em
-
-
 }
 
 
@@ -208,12 +206,15 @@ h2 {
 
 /* SEC01 Galler */
 
-.masseage_parent {
+.masseage_sub_title {
 	font-size: 1.5em;
 	font-weight: bold;
 	margin: 16px 0;
 	letter-spacing: 0.1em;
+}
 
+.masseage_parent {
+	margin: 64px 0;
 }
 
 
