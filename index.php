@@ -340,41 +340,39 @@ if ($status == false) {
 					<p class="sos_title">めールでご通報の方</p>
 					<iframe class="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSfdOokxH_ywpHMyz7rqHufa7uIU0fN7wxmRmu-yScKlvViANw/viewform?embedded=true" width="640" height="1130" frameborder="0" marginheight="0" marginwidth="0">メール</iframe>
 				</div>
-		</div>
 
 
-		</section>
+			</section>
 
-		<section id="sec06">
-			<header>
-				<h2><span class="title">会社概要</span></h2>
-			</header>
-			<div class="innerS">
-				<ul class="col2">
-					<li>
-						<p>〒201-1071<br>福岡県福岡市中央区区にこにこ町1-2-999</p>
-						<p>TEL 0120-2525-2525</p>
-						<p>e-Mail animal@example.com</p>
-						<p>営業時間 10:00〜20:00（水曜定休）</p>
-						<p>※都合により休業する場合がございます</p>
-					</li>
-					<li>
-						<div id="map">
-							<!-- GOOGLE MAP -->
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6647.1822509942!2d130.40242577773242!3d33.58996382293685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419185d8270707%3A0xd77996b98281d785!2z44K744Kk44Ot44Oz!5e0!3m2!1sja!2sjp!4v1625627470292!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-							<!-- // GOOGLE MAP -->
-						</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<!-- // COMPANY -->
+			<section id="sec06">
+				<header>
+					<h2><span class="title">会社概要</span></h2>
+				</header>
+				<div class="innerS">
+					<ul class="col2">
+						<li>
+							<p>〒201-1071<br>福岡県福岡市中央区区にこにこ町1-2-999</p>
+							<p>TEL 0120-2525-2525</p>
+							<p>e-Mail animal@example.com</p>
+							<p>営業時間 10:00〜20:00（水曜定休）</p>
+						</li>
+						<li>
+							<div id="map">
+								<!-- GOOGLE MAP -->
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6647.1822509942!2d130.40242577773242!3d33.58996382293685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419185d8270707%3A0xd77996b98281d785!2z44K744Kk44Ot44Oz!5e0!3m2!1sja!2sjp!4v1625627470292!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								<!-- // GOOGLE MAP -->
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- // COMPANY -->
 
 
 
-		<footer id="footer">
+			<footer id="footer">
 
-			<!-- <ul class="shareSns">
+				<!-- <ul class="shareSns">
 					<div id="ss">
 						<ul class="clearfix">
 							<li class="sstw"><a href="https://twitter.com/share?url=https://：" target="_blank">あ</i></a></li>
@@ -384,15 +382,15 @@ if ($status == false) {
 						</ul>
 					</div>
 					ここまでソーシャルシェア -->
-			</ul>
-			<p>©ANIMAL POLICE FUKUOKA All rights reserved.</p>
+				</ul>
+				<p>©ANIMAL POLICE FUKUOKA All rights reserved.</p>
 
-			<!-- 管理者権限を持った人しか使わないボタン -->
-			<a href="<?= link_login ?>">管理者ログイン</a>
-			Copyright(c) 2016 Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com" target="_blank">http://f-tpl.com</a><!-- ←クレジット表記を外す場合はシリアルキーが必要です http://f-tpl.com/credit/ -->
-		</footer>
+				<!-- 管理者権限を持った人しか使わないボタン -->
+				<a href="<?= link_login ?>">管理者ログイン</a>
+				Copyright(c) 2016 Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com" target="_blank">http://f-tpl.com</a><!-- ←クレジット表記を外す場合はシリアルキーが必要です http://f-tpl.com/credit/ -->
+			</footer>
 
-	</div>
+		</div>
 	</div>
 
 
