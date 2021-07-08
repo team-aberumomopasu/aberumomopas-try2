@@ -13,12 +13,7 @@
  **************************************************/
 
 // 設定
-$api_key = 'DZzO38gASoTFrK76gfKFWg4ez';    // APIキー
-$api_secret = 'eU08h8x2VYWfhcSQGd3oHdi0oEk6av6w6MubQ8xk7iA7FI1JcW';    // APIシークレット
-$access_token = '';    // アクセストークン
-$access_token_secret = '';    // アクセストークンシークレット
-$request_url = 'https://api.twitter.com/1.1/search/tweets.json';    // エンドポイント
-$request_method = 'GET';
+
 
 
 // パラメータA (オプション)
