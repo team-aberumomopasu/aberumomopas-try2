@@ -213,8 +213,8 @@ h2 {
 	letter-spacing: 0.1em;
 }
 
-.masseage_parent {
-	margin: 64px 0;
+.masseage_parent:nth-of-type(n+2) {
+	margin-top: 64px;
 }
 
 

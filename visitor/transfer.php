@@ -2,10 +2,15 @@
 include("../functions.php");
 include("../config/link.php");
 $pdo = connect_to_db();
+$already = 0; //卒業生
+$transfer = 1; //譲渡待ち
+$conditioning = 2; //コンディショニング中
 
-$sql = "SELECT * FROM Transfer_table ORDER BY id DESC";
+
+$sql = "SELECT * FROM Transfer_table WHERE transfer=:transfer";
 
 $stmt = $pdo->prepare($sql);
+$stmt->bindValue(':transfer', $transfer, PDO::PARAM_INT);
 $status = $stmt->execute();
 
 if ($status == false) {
@@ -16,7 +21,6 @@ if ($status == false) {
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
   $output = "";
   foreach ($result as $record) {
-    // $output .= '<div>';
     $output .= '<div class="inu_box">';
     $output .= '<div class="inu_img">';
     $output .= "<img  src='../admin/transfer/{$record["image"]}' width=300px >";
@@ -37,10 +41,76 @@ if ($status == false) {
     $output .= "<p>{$record["personality"]}</p>";
     $output .= "</div>";
     $output .= "</div>";
-    // $output .= "</div>";
   }
   unset($value);
 }
+
+$sql = "SELECT * FROM Transfer_table WHERE transfer=:conditioning";
+
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(':conditioning', $conditioning, PDO::PARAM_INT);
+$status = $stmt->execute();
+
+if ($status == false) {
+  $error = $stmt->errorInfo();
+  echo json_encode(["error_msg" => "{$error[2]}"]);
+  exit();
+} else {
+  $conditioning = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $output_conditioning = "";
+  foreach ($conditioning as $record) {
+    $output_conditioning .= '<div class="inu_box">';
+    $output_conditioning .= '<div class="inu_img">';
+    $output_conditioning .= "<img  src='../admin/transfer/{$record["image"]}' width=300px >";
+    $output_conditioning .= "</div>";
+    $output_conditioning .= "<div class='inu_text'>";
+    $output_conditioning .= "<p>名前:{$record["dogName"]}</p>";
+    $output_conditioning .= "<p>年齢:推定 {$record["dogAge"]}歳</p>";
+    if ($record["sex"] == "オス") {
+      $output_conditioning .= "<p><span class='material-icons' id='female'>female</span></p>";
+    } else {
+      $output_conditioning .= "<p><span class='material-icons' id='male'>male</span></p>";
+    }
+    $output_conditioning .= "<p>避妊去勢手術:{$record["con_cas"]}</p>";
+    $output_conditioning .= "<p>フィラリア検査:{$record["firaria"]}</p>";
+    $output_conditioning .= "<p>犬種:{$record["dogBreed"]}</p>";
+    $output_conditioning .= "<p>持病:{$record["sick"]}</p>";
+    $output_conditioning .= "<p>性格:</p>";
+    $output_conditioning .= "<p>{$record["personality"]}</p>";
+    $output_conditioning .= "</div>";
+    $output_conditioning .= "</div>";
+  }
+  unset($value);
+}
+
+$sql = "SELECT * FROM Transfer_table WHERE transfer=:already";
+
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(':already', $already, PDO::PARAM_INT);
+$status = $stmt->execute();
+
+if ($status == false) {
+  $error = $stmt->errorInfo();
+  echo json_encode(["error_msg" => "{$error[2]}"]);
+  exit();
+} else {
+  $already_dog = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+$sql = 'SELECT COUNT(*) FROM Transfer_table WHERE transfer=:already';
+
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(':already', $already, PDO::PARAM_INT);
+$status = $stmt->execute();
+
+if ($status == false) {
+  $error = $stmt->errorInfo();
+  echo json_encode(["error_msg" => "{$error[2]}"]);
+  exit();
+} else {
+  $already_count = $stmt->fetch();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -291,7 +361,9 @@ if ($status == false) {
           <h2><span class="title">保護中の子たち</span></h2>
         </header>
         <div class="innerS">
-          <p>工事中</p>
+          <div class="inu_big_box">
+            <?= $output_conditioning ?>
+          </div>
         </div>
       </section>
       <!-- // PROJECT -->
@@ -310,8 +382,24 @@ if ($status == false) {
             <p class="masseage_sub_title">
               無事に里親さんが見つかりました
             </p>
+            <div class="innerS">
+              <div class="inu_already_box">
+                <div class="already_dog_container">
+                  <img src="../admin/transfer/<?= $already_dog[0]["image"] ?>" width=300px>
+                  <p><?= $already_dog[0]["dogName"] ?></p>
+                </div>
+                <div class="already_dog_container">
+                  <img src="../admin/transfer/<?= $already_dog[1]["image"] ?>" width=300px>
+                  <p><?= $already_dog[1]["dogName"] ?></p>
+                </div>
+                <div class="already_dog_container">
+                  <img src="../admin/transfer/<?= $already_dog[2]["image"] ?>" width=300px>
+                  <p><?= $already_dog[2]["dogName"] ?></p>
+                </div>
+              </div>
+            </div>
             <p>
-              これまでに〇〇匹の仔たちが、ここから新しい家族を見つけました！
+              これまでに<?= $already_count[0] ?>匹の仔たちが、ここから新しい家族を見つけました！
             </p>
 
           </div>
@@ -323,7 +411,7 @@ if ($status == false) {
 
       <!-- // COMPANY -->
 
-      <footer id="footer">
+      <footer id=" footer">
 
         <p>©ANIMAL POLICE FUKUOKA All rights reserved.</p>
 

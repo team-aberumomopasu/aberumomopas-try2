@@ -119,7 +119,7 @@ if ($status == false) {
 							<li><a href="#sec04"><span class="material-icons">
 										email
 									</span>お問合わせ</a></li>
-							<li><a href="#sec5">
+							<li><a href="#sec05">
 									<span class="material-icons">
 										phone_in_talk
 									</span>SOS</a></li>

@@ -334,7 +334,6 @@ h2 {
 }
 
 
-
 /* RESPONSIVE 設定
 ------------------------------------------------------------*/
 
@@ -602,12 +601,26 @@ h2 {
 
 /* 里親募集中表示用 */
 .inu_big_box {
-
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-
   flex-direction: column;
+}
+
+.inu_already_box {
+  display: flex;
+  margin: 64px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.already_dog_container:nth-of-type(n+2) {
+	margin:0 0 0 48px;
+}
+
+.already_dog_container img{
+  width: 160px;
+  border-radius: 8px;
 }
 
 .inu_box {

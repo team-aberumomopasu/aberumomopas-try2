@@ -69,8 +69,9 @@ check_session_id();
       譲渡(transfer):
       <select type="text" name="transfer">
         <option value="">選択</option>
-        <option value="未譲渡">未譲渡</option>
-        <option value="譲渡済">譲渡済</option>
+        <option value=0>卒業生</option>
+        <option value=1>里親捜し中</option>
+        <option value=2>コンディショニング中</option>
       </select>
     </div>
     <div>
