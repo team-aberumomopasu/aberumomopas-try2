@@ -226,6 +226,24 @@ h2 {
 
 /* SEC02 Gallery
 ------------------------------------------------------------*/
+.p_1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.p_2 {
+  margin-bottom: 10px;
+  /* margin-left: 30px; */
+  font-size: 20px;
+  text-align: center;
+}
+
+.p_3 {
+  /* margin-left: 120px; */
+  text-align: center;
+}
+
+
 /* #sec02{
 	padding: 0 !important;
 }
@@ -597,7 +615,13 @@ h2 {
   margin: 36px 0 0;
 }
 .inu_img{
+  width: 200px;
+  background-size: cover;
+}
+
+.inu_img img{
   border-radius: 4px;
+  width: 160px;
 }
 
 .inu_text {

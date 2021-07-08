@@ -105,7 +105,7 @@ if ($status == false) {
 									</span>トップ</a></li>
 							<li><a href="#sec01">
 									<span class="material-icons">
-										emoji_flags
+										flag
 									</span>
 									メッセージ</a>
 							</li>
@@ -119,7 +119,11 @@ if ($status == false) {
 							<li><a href="#sec04"><span class="material-icons">
 										email
 									</span>お問合わせ</a></li>
-							<li><a href="#sec05">
+							<li><a href="#sec5">
+									<span class="material-icons">
+										phone_in_talk
+									</span>SOS</a></li>
+							<li><a href="#sec06">
 									<span class="material-icons">
 										place
 									</span>会社概要</a></li>
@@ -129,7 +133,6 @@ if ($status == false) {
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="visitor/donate.php">寄付•グッズ</a></li>
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="visitor/transfer.php">譲渡会</a></li>
           <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="visitor/contact.php">お問合わせ</a></li> -->
-						</ul>
 						<ul id="sns">
 							<!-- <li><a href="#" target="_blank"><img src="images/iconFb.png" width="20" height="20" alt="FB"></a></li> -->
 							<li><a id="logo_twitter" href="#" target="_blank"><img src="images/logo_Twitter.svg" width="30" height="30" alt="twitter"></a>
@@ -137,7 +140,23 @@ if ($status == false) {
 							<li><a id="logo_note" href="https://note.com/animal_police" target="_blank"><img src="images/logo_note.png" width="50" height="50" alt="note"></a></li>
 							<li><a id="logo_youtube" href="https://www.youtube.com/channel/UCsIFu-o1KP0ETTCrEUw36fw" target="_blank"><img src="images/logo_youtube2.png" width="30" height="30" alt="You Tube"></a></li>
 						</ul>
-
+						<ul id="develop">
+							<li><a href="#">
+									<p>
+										#アニマルポリス
+									</p>
+									<p>
+										巡回中
+									</p>
+									<span class="material-icons">
+										accessibility_new
+									</span> <span class="material-icons">
+										accessibility_new
+									</span> <span class="material-icons">
+										accessibility_new
+									</span>
+								</a></li>
+						</ul>
 
 					</div>
 				</nav>
@@ -152,7 +171,6 @@ if ($status == false) {
 					<h2><span class="title">メッセージ</span></h2>
 				</header>
 				<div class="innerS">
-
 					<div class="masseage_parent">
 						<p class="masseage_sub_title">
 							「かわいそう」
@@ -160,10 +178,10 @@ if ($status == false) {
 							命は救えない
 						</p>
 						<p>
-							「かわいそう」だけど何もしない人が多いのも現実です。
-							つい最近まで私も後者の立場でした。
-							仕事をしながら寄付やボランティアをするのは限界があります。
-							でも、このままじゃ何も変わらない・・・
+							動物虐待、殺処分ともになくならない動物後進国の日本。
+							保護、啓発活動に尽力してくださる人がいる一方で
+							「かわいそう」だけど何もしていない人が多いのが現実。
+							つい最近までの私もそうでした。
 						</p>
 					</div>
 
@@ -176,9 +194,9 @@ if ($status == false) {
 						</p>
 						<p>
 							私が感銘を受けた言葉の一つです。
-							動物虐待、殺処分ともになくならない動物後進国の日本。
-							保護、啓発活動に尽力している人がいる一方で
+							片手間で寄付やボランティアをしても何も変わらない・・・
 							思い切って仕事を辞め、この団体を立ち上げました。
+
 						</p>
 					</div>
 
@@ -187,8 +205,10 @@ if ($status == false) {
 							本当にセカイを変えたいなら行動するしかない。
 						</p>
 						<p>
+
+							「愛」に飢えたまま人知れず死んでゆく動物をなくしたい。
 							皆さんの思いを背負って虐待、殺処分撲滅に取り組んでいきます。
-							活動に賛同してくださる方はサポートをお願いします。
+							活動に賛同してくださる方は是非サポートをお願いします。
 						</p>
 					</div>
 
@@ -297,35 +317,64 @@ if ($status == false) {
 				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezP1JcBEXfFgDVtw7za2NVUN5ZzG41VcYLd_ndD9uPvayafg/viewform?embedded=true" width="100%" height="808" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 			</section>
 			<!-- // PROJECT -->
-			<!-- COMPANY -->
 			<section id="sec05">
 				<header>
-					<h2><span class="title">会社概要</span></h2>
+					<h2><span class="title">SOS</span></h2>
 				</header>
 				<div class="innerS">
-					<ul class="col2">
-						<li>
-							<p>〒201-1071<br>福岡県福岡市中央区区にこにこ町1-2-999</p>
-							<p>TEL 0120-2525-2525</p>
-							<p>e-Mail animal@example.com</p>
-							<p>営業時間 10:00〜20:00（水曜定休）</p>
-							<p>※都合により休業する場合がございます</p>
-						</li>
-						<li>
-							<div id="map">
-								<!-- GOOGLE MAP -->
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6647.1822509942!2d130.40242577773242!3d33.58996382293685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419185d8270707%3A0xd77996b98281d785!2z44K744Kk44Ot44Oz!5e0!3m2!1sja!2sjp!4v1625627470292!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-								<!-- // GOOGLE MAP -->
-							</div>
-						</li>
-					</ul>
+					<p>虐待、事故などを見掛けた方は、電話、もしくはメールにてご通報ください</p>
+					<p>ご自身で虐待かどうか判断できない場合、どう対処していいか分からない場合は、<strong>専門スタッフが事情をお聞きし対応致しますのでご安心ください。</strong></p>
+					<p><strong>動物愛護管理法違反として告発につながる可能性があります</strong>ので、些細な情報でもご提供をお願いします。</p>
+					<p>イタズラや虚偽の通報により業務妨害に当たると判断した場合は、法的措置を取る場合があります。</p>
 				</div>
-			</section>
-			<!-- // COMPANY -->
+				<div class="innerS">
+					<p class="sos_title">
+						お電話でご通報の方</p>
+					<p>下記のボタンをクリック、もしくはタップすると福岡アニマルポリスにつながります</p>
+					<a href="tel:090-1927-2584" class="btn_push_phone">
+						<span class="material-icons">
+							phone_forwarded
+						</span>電話をかける</a>
+				</div>
+				<div class="innerS">
+					<p class="sos_title">めールでご通報の方</p>
+					<iframe class="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSfdOokxH_ywpHMyz7rqHufa7uIU0fN7wxmRmu-yScKlvViANw/viewform?embedded=true" width="640" height="1130" frameborder="0" marginheight="0" marginwidth="0">メール</iframe>
+				</div>
+		</div>
 
-			<footer id="footer">
 
-				<!-- <ul class="shareSns">
+		</section>
+
+		<section id="sec06">
+			<header>
+				<h2><span class="title">会社概要</span></h2>
+			</header>
+			<div class="innerS">
+				<ul class="col2">
+					<li>
+						<p>〒201-1071<br>福岡県福岡市中央区区にこにこ町1-2-999</p>
+						<p>TEL 0120-2525-2525</p>
+						<p>e-Mail animal@example.com</p>
+						<p>営業時間 10:00〜20:00（水曜定休）</p>
+						<p>※都合により休業する場合がございます</p>
+					</li>
+					<li>
+						<div id="map">
+							<!-- GOOGLE MAP -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6647.1822509942!2d130.40242577773242!3d33.58996382293685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419185d8270707%3A0xd77996b98281d785!2z44K744Kk44Ot44Oz!5e0!3m2!1sja!2sjp!4v1625627470292!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							<!-- // GOOGLE MAP -->
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- // COMPANY -->
+
+
+
+		<footer id="footer">
+
+			<!-- <ul class="shareSns">
 					<div id="ss">
 						<ul class="clearfix">
 							<li class="sstw"><a href="https://twitter.com/share?url=https://：" target="_blank">あ</i></a></li>
@@ -335,15 +384,15 @@ if ($status == false) {
 						</ul>
 					</div>
 					ここまでソーシャルシェア -->
-				</ul>
-				<p>©ANIMAL POLICE FUKUOKA All rights reserved.</p>
+			</ul>
+			<p>©ANIMAL POLICE FUKUOKA All rights reserved.</p>
 
-				<!-- 管理者権限を持った人しか使わないボタン -->
-				<a href="<?= link_login ?>">管理者ログイン</a>
-				Copyright(c) 2016 Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com" target="_blank">http://f-tpl.com</a><!-- ←クレジット表記を外す場合はシリアルキーが必要です http://f-tpl.com/credit/ -->
-			</footer>
+			<!-- 管理者権限を持った人しか使わないボタン -->
+			<a href="<?= link_login ?>">管理者ログイン</a>
+			Copyright(c) 2016 Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com" target="_blank">http://f-tpl.com</a><!-- ←クレジット表記を外す場合はシリアルキーが必要です http://f-tpl.com/credit/ -->
+		</footer>
 
-		</div>
+	</div>
 	</div>
 
 
