@@ -21,7 +21,7 @@ if ($status == false) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="動物虐待のない世界を目指しています">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<title>ANIMAL POLICE FUKUOKA</title>
 	<link rel="stylesheet" media="all" href="css/apf_style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -143,9 +143,9 @@ if ($status == false) {
 						<ul id="develop">
 							<li><a href="twitter.php" target="_brank">
 									<p>
-										#アニマルポリス
-									</p>
-									<p>
+										<strong>#
+										</strong>
+										アニマルポリス<br>
 										巡回中
 									</p>
 									<span class="material-icons">
@@ -163,8 +163,11 @@ if ($status == false) {
 			</div>
 		</div>
 
+		<!-- //ここまでサイドバー -->
+		<!-- ここからコンテンツ -->
 		<div id="content">
 			<p id="mainImg"><img src="images/top.jpg" alt="dog"></p>
+
 			<!-- MESSAGE -->
 			<section id="sec01">
 				<header>
@@ -222,35 +225,23 @@ if ($status == false) {
 				</header>
 				<div class="innerS">
 					<p>
-						アニマルポリスを本気で作りたいと思い、10年勤めた新聞社を今年１月に退社。ボランティアではなく、仕事として成り立たせるためにはIT、プログラミング、起業について学ぶ必要があると感じ、現在の専門学校へ。卒業時の10月には団体を立ち上げたいと思っている。私が小学生の頃、近所のおじさんが飼い犬を殺してしまう悲しい出来事がありました。無抵抗のまま暴行を受け、お腹がパンパンの状態で亡くなっていたそうです。大型犬だったので本気で抵抗すれば飼い主を噛むことも逃げることもできたはずなのに、それをしなかったあの子の気持ちを思うと今でも涙が出ます。飼い犬を虐待しても殺しても殺処分しても罪に問われていない人はたくさんいます。そんな日本を少しでも変えていきたい。これがアニマルポリスを作りたいと思った最大の理由です。
+						セカイを変えるために日々活動しています。
+					</p>
+					<p>
+						noteにて日々の活動やわたしたちの想いを発信しています。
 					</p>
 				</div>
 				<div class="innerS">
 					<div id="message"></div>
 				</div>
 
+				<div class="innerS youtube">
+					<iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/Jvn3wE1nqrM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
 			</section>
 
 
-			<!-- <ul id="gallery">
-
-					<li><img src="images/photo01.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo02.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo03.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo04.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo05.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo06.jpg" width="360" height="350" alt=""></li>
-					<li class="full"><img src="images/photo07.jpg" width="1080" height="695" alt=""></li>
-					<li><img src="images/photo08.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo09.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo10.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo11.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo12.jpg" width="360" height="350" alt=""></li>
-					<li><img src="images/photo13.jpg" width="360" height="350" alt=""></li>
-				</ul> -->
-
-
-			<!-- // GALLERY -->
 			<!-- BRAND -->
 			<section id="sec03">
 				<header>
@@ -267,9 +258,9 @@ if ($status == false) {
 						２週間お世話をしていただきます。
 						双方に問題がないようでしたら、正式に譲渡となります。
 					</p>
+					<p><img src="images/zyouto.jpg" alt="譲渡会"></p>
 
-
-					<ul class="col4">
+					<!-- <ul class="col4">
 						<li>
 							<p class="img"><img class="sec03_img" src="admin/transfer/<?= $result[0]['image'] ?>" width="168" height="168" alt=""></p>
 						</li>
@@ -279,8 +270,8 @@ if ($status == false) {
 						<li>
 							<p class="img"><img src="admin/transfer/<?= $result[2]['image'] ?>" width="168" height="168" alt=""></p>
 						</li>
-					</ul>
-					<div class="a">
+					</ul> -->
+					<div class="sec03_btn">
 						<a href="<?= link_transfer ?>">詳しくはこちら</a>
 					</div>
 				</div>
@@ -297,24 +288,37 @@ if ($status == false) {
 
 					<div class="article">
 						<div class="article-content">
-							<img src="style-img/join-team.png">
+							<span class="material-icons">
+								accessibility_new
+							</span>
+							<!-- <img src="style-img/join-team.png"> -->
 							<p>仲間になりたい</p>
 						</div>
 						<div class="article-content">
-							<img src="style-img/discipline.png">
+							<span class="material-icons">
+								live_help
+							</span>
+							<!-- <img src="style-img/discipline.png"> -->
 							<p>飼育に関する相談</p>
 						</div>
 						<div class="article-content">
-							<img src="style-img/sponsor.png">
-							<p>スポンサー希望</p>
+							<span class="material-icons">
+								volunteer_activism
+							</span>
+							<!-- <img src="style-img/sponsor.png"> -->
+							<p>スポンサー・寄付の希望</p>
 						</div>
-						<div class="article-content">
+						<!-- <div class="article-content">
 							<img src="style-img/donate.png">
 							<p>寄付について</p>
-						</div>
+						</div> -->
 					</div>
 				</div>
-				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezP1JcBEXfFgDVtw7za2NVUN5ZzG41VcYLd_ndD9uPvayafg/viewform?embedded=true" width="100%" height="808" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+				<div class="innerS">
+
+					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezP1JcBEXfFgDVtw7za2NVUN5ZzG41VcYLd_ndD9uPvayafg/viewform?embedded=true" width="640" height="808" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+				</div>
+
 			</section>
 			<!-- // PROJECT -->
 			<section id="sec05">
@@ -359,18 +363,32 @@ if ($status == false) {
 						<li>
 							<div id="map">
 								<!-- GOOGLE MAP -->
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6647.1822509942!2d130.40242577773242!3d33.58996382293685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419185d8270707%3A0xd77996b98281d785!2z44K744Kk44Ot44Oz!5e0!3m2!1sja!2sjp!4v1625627470292!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								<iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6647.1822509942!2d130.40242577773242!3d33.58996382293685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419185d8270707%3A0xd77996b98281d785!2z44K744Kk44Ot44Oz!5e0!3m2!1sja!2sjp!4v1625627470292!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 								<!-- // GOOGLE MAP -->
 							</div>
 						</li>
 					</ul>
 				</div>
+
+				<div class="innerS">
+
+					<ul class="sec06_sns">
+						<!-- <li><a href="#" target="_blank"><img src="images/iconFb.png" width="20" height="20" alt="FB"></a></li> -->
+						<li><a id="sec06_logo_twitter" href="#" target="_blank"><img src="images/logo_Twitter.svg" width="30" height="30" alt="twitter"></a>
+						</li>
+						<li><a id="sec06_logo_note" href="https://note.com/animal_police" target="_blank"><img src="images/logo_note.png" width="50" height="50" alt="note"></a></li>
+						<li><a id="sec06_ogo_youtube" href="https://www.youtube.com/channel/UCsIFu-o1KP0ETTCrEUw36fw" target="_blank"><img src="images/logo_youtube2.png" width="30" height="30" alt="You Tube"></a></li>
+					</ul>
+				</div>
+
 			</section>
 			<!-- // COMPANY -->
 
 
 
 			<footer id="footer">
+
+
 
 				<!-- <ul class="shareSns">
 					<div id="ss">
@@ -380,9 +398,8 @@ if ($status == false) {
 							<li class="sshtb"><a href="http://b.hatena.ne.jp/entry/" target="_blank"><i class="fa-lg">う</i></a></li>
 
 						</ul>
-					</div>
-					ここまでソーシャルシェア -->
-				</ul>
+				 </div> -->
+
 				<p>©ANIMAL POLICE FUKUOKA All rights reserved.</p>
 
 				<!-- 管理者権限を持った人しか使わないボタン -->
@@ -391,6 +408,7 @@ if ($status == false) {
 			</footer>
 
 		</div>
+		<!-- ここまで -->
 	</div>
 
 
