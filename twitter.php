@@ -187,6 +187,7 @@ $html .= '<small style="display:block; border-top:1px solid #555; padding-top:12
 
 <body>
 
+
   <header>
     <div class="header_container">
       <h1>#アニマルポリス<img src="./images/パトカーこっち.png" alt="画像">巡回中</h1>
