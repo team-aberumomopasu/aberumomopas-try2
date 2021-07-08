@@ -191,9 +191,9 @@ $html .= '<small style="display:block; border-top:1px solid #555; padding-top:12
     <div class="header_container">
       <h1>#アニマルポリス<img src="./images/パトカーこっち.png" alt="画像">巡回中</h1>
       <div>
-        <p>どぶつに関するツイートのみを表示しています。</p>
-        <p> リロードすると最新の１００犬を取得し直します。</p>
-        <p>虐待や里親募集等投稿子を見かけたら
+        <p>動物に関するツイートのみを表示しています。</p>
+        <p> リロードすると最新の１００件を取得し直します。</p>
+        <p>虐待や里親募集などの投稿を見かけたら
         <p  class="sample">Tweet#アニマルポリス</p>
         をタップ！</p>
         <p>引用ツイートをお願いします。</p>
