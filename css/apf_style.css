@@ -305,6 +305,7 @@ h2 {
   border: solid 0.1px;
 	width:  120px;       /* ※縦横を同値に */
 	height: 120px;       /* ※縦横を同値に */
+	align-items: center;
 }
 
 .article-content p {
