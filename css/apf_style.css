@@ -154,12 +154,15 @@ input:focus {
 
 
 h2 {
-	margin: 0 0 16px 0;
 	border-bottom: solid 3px #cce4ff;
 	position: relative;
+	font-size: 2em;
+	text-align: center;
 	font-weight: bold;
 	padding: 0 0 70px 0;
-	letter-spacing: 0.3em
+	letter-spacing: 0.3em;
+	width: 60%;
+	margin: 70px auto;
 }
 
 
@@ -179,23 +182,11 @@ img {
 }
 
 
-
-h2 {
-	width: 60%;
-	margin: 70px auto;
-	text-align: center;
-	font-size: 2em;
-
-
-}
-
 .inner {
 	width: 80%;
 	margin: 0 auto;
 	padding-bottom: 50px;
 }
-
-
 
 .innerS {
 	width: 60%;
@@ -203,9 +194,15 @@ h2 {
 	padding-bottom: 80px;
 }
 
+iframe {
+	border-radius: 4px;
+	margin: 24px 0;
 
-/* SEC01 Galler */
-.sos_title,
+}
+
+
+/* SEC01 メッセージ */
+
 .masseage_sub_title {
 	font-size: 1.5em;
 	font-weight: bold;
@@ -213,53 +210,86 @@ h2 {
 	letter-spacing: 0.1em;
 }
 
-.masseage_parent {
-	margin: 64px 0;
+
+.masseage_parent:nth-of-type(n+2) {
+	margin: 64px 0 0;
 }
 
 
-/* SEC02 Gallery
-------------------------------------------------------------*/
-/* #sec02{
-	padding: 0 !important;
+/* SEC02 活動報告 */
+
+
+/* note表示用 */
+#message {
+	display: flex;
+	justify-content: space-between
 }
 
-#sec02 header{
+#message p img {
 	display: none;
 }
 
-#gallery{
-	overflow: hidden;
-}
-
-#gallery li{
-	float: left;
-	width: calc(100%/3);
-	line-height: 0;
-}
-#gallery li.full{
-	width: 100%;
-}
-
-
-#gallery img{
+#message a.btn {
 	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+
+#message .mu {
+	width: 28%;
+	position: relative
+}
+
+#message .mu img {
+	margin: 32px 0px;
 	width: 100%;
 	height: auto;
-} */
+	border-radius: 10px;
+	/* 角丸半径を50%にする(=円形にする) */
+	/* border: solid 0.1px; */
+}
 
+#message .mu h3 {
+	margin-bottom: 1em;
+	font-size: 1.3rem;
+	text-align: left;
+	font-weight: 500;
+}
+
+#message .mu small {
+	display: block
+}
+
+.youtube {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
 
 /* SEC03 BRAND
 ------------------------------------------------------------*/
-.col4 .img {
-	margin: 0 auto;
+
+
+.sec03_btn {
+	margin-top: 40px;
+	margin-right: 40px;
+	text-align: right;
 }
 
-.col4 img {
-	border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-  border: solid 0.1px;
-	width:  100px;       /* ※縦横を同値に */
-	height: 100px;       /* ※縦横を同値に */
+
+
+.innerS img {
+	border-radius: 4px;
+	/* 角丸半径を50%にする(=円形にする) */
+	/* border: solid 0.1px;
+	width: 100px;
+	/* ※縦横を同値に */
+	/* height: 100px; */
+	/* ※縦横を同値に */
 }
 
 .innerS {
@@ -272,11 +302,7 @@ h2 {
 	margin-bottom: 30px;
 }
 
-.a {
-	margin-top: 40px;
-	margin-right: 40px;
-	text-align: right;
-}
+
 
 /* SEC04 PROJECT
 ------------------------------------------------------------*/
@@ -301,10 +327,13 @@ h2 {
 }
 
 .article-content img {
-	border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-  border: solid 0.1px;
-	width:  120px;       /* ※縦横を同値に */
-	height: 120px;       /* ※縦横を同値に */
+	border-radius: 50%;
+	/* 角丸半径を50%にする(=円形にする) */
+	/* border: solid 0.1px; */
+	width: 120px;
+	/* ※縦横を同値に */
+	height: 120px;
+	/* ※縦横を同値に */
 	align-items: center;
 }
 
@@ -314,9 +343,6 @@ h2 {
 
 /* SEC05 COMPANY
 ------------------------------------------------------------*/
-#sec05 p {
-	margin-bottom: 5px;
-}
 
 .col2 li {
 	display: inline-block;
@@ -339,10 +365,29 @@ h2 {
 	width: 100% !important;
 	height: 100% !important;
 	border: 0;
-	border-radius: 10px;
+}
+
+/* .sos*/
+.sos_title {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 36px 0;
+	letter-spacing: 0.1em;
 }
 
 
+/* SEC06 会社概要 */
+
+.sec06_sns{
+	display: flex;
+	align-items: center;
+
+
+}
+
+#sec06_logo_note {
+	top: -10px;
+}
 
 /* RESPONSIVE 設定
 ------------------------------------------------------------*/
@@ -401,26 +446,17 @@ h2 {
 
 	/* SEC03 BRAND
 	-----------------*/
-	.col4 {
-		text-align: center;
-	}
 
-	.col4 li {
-		display: inline-block;
-		width: 18%;
-		padding: 0 3%;
-		vertical-align: top;
-		text-align: left;
-	}
 
 	#map iframe {
 		height: 200px !important;
 	}
 
 	#footer {
-		padding: 30px 10px 70px 0;
+		margin: 30px 10px 70px 0;
 	}
 }
+
 
 
 @media only screen and (min-width: 641px) {
@@ -441,10 +477,7 @@ h2 {
 		padding-bottom: 30px;
 	}
 
-	#gallery li {
-		float: none;
-		width: 100%;
-	}
+
 
 	.article img {
 		float: none;
@@ -456,6 +489,26 @@ h2 {
 		width: 96% !important;
 		left: 2%;
 	}
+
+	/* note */
+	#message {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#message .mu {
+		width: 80%;
+	}
+
+	/* youtube */
+	.youtube {
+		width: 80%;
+		height: 80%;
+	}
+
+
 }
 
 @media only screen and (max-width: 799px) {
@@ -470,7 +523,6 @@ h2 {
 		width: 100%;
 		height: 60px;
 		background: #fff;
-		border-bottom: 1px solid #ccc;
 	}
 
 	#sidebar h1 {
@@ -561,7 +613,6 @@ h2 {
 	}
 
 	#mainnav ul {
-		border-bottom: 1px solid #ccc;
 		background: #fff;
 		text-align: left;
 	}
@@ -569,17 +620,17 @@ h2 {
 	#mainnav li a {
 		position: relative;
 		display: block;
-		padding: 15px 25px;
-		border-bottom: 1px solid #ccc;
-
+		padding: 8px 24px;
 		font-weight: 400;
 	}
 
 	#mainnav #sns {
+		display: none;
+/*
 		display: flex;
-		align-items: center;
+		align-items: center; */
 	}
-
+/*
 	#mainnav #sns li a {
 		position: relative;
 		display: inline-block;
@@ -594,13 +645,8 @@ h2 {
 
 	#mainnav #sns li a:before {
 		border: 0;
-	}
+	} */
 
-	.col4 li {
-		margin: 0 auto 50px;
-		display: block;
-		text-align: center;
-	}
 
 	section h2 {
 		margin: 55px auto;
@@ -609,114 +655,6 @@ h2 {
 
 
 
-/* note表示用 */
-#message {
-	display: flex;
-	justify-content: space-between
-}
-
-#message p img {
-	display: none;
-}
-
-#message a.btn {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0
-}
-
-#message .mu {
-	width: 28%;
-	position: relative
-}
-
-#message .mu img {
-	margin: 32px 0px;
-	width: 100%;
-	height: auto;
-  border-radius: 10px;  /* 角丸半径を50%にする(=円形にする) */
-  border: solid 0.1px;
-}
-
-#message .mu h3 {
-	margin-bottom: 1em;
-	font-size: 1.3rem;
-	text-align: left;
-	font-weight: 500;
-}
-
-#message .mu small {
-	display: block
-}
-
-@media screen and (max-width: 750px) {
-	#message {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-
-	#message .mu {
-		width: 80%;
-	}
-}
-
-/*
-  Share SNS
-  Created by Toshihiko Arai.
-  https://101010.fun/programming/css-sns-share.html
-*/
-.shareSns {
-	list-style: none;
-	overflow: hidden;
-	margin: 0;
-	padding: 0px;
-}
-
-.shareSns li {
-	text-align: center;
-	float: left;
-	margin: 0;
-	padding: 0px;
-}
-
-.shareSns li a {
-	width: 180px;
-	line-height: 50px;
-	font-size: 20px;
-}
-
-.shareSns li a:hover {
-	opacity: 0.8;
-}
-
-.shareSns li .icon-twitter {
-	display: block;
-	background: #55acee;
-	color: #ffffff;
-}
-
-.shareSns li .icon-facebook {
-	display: block;
-	background: #3B5998;
-	color: #ffffff;
-}
-
-.shareSns li .icon-hatebu {
-	display: block;
-	background: #008FDE;
-	color: #ffffff;
-}
-
-.shareSns li .icon-pocket {
-	display: block;
-	background: #EB4654;
-	color: #ffffff;
-}
 
 /*シェアボタン*/
 .clearfi {
