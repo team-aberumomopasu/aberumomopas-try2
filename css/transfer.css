@@ -109,6 +109,12 @@ span[class^="material"] {
   top: 6px;
 }
 
+#male,
+#female{
+  top: 3px;
+  
+}
+
 a {
   color: #0066ff;
   text-decoration: none;

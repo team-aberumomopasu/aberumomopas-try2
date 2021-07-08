@@ -255,7 +255,28 @@ h2 {
 	margin: 0 auto;
 }
 
+.col4 img {
+	border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  border: solid 0.1px;
+	width:  100px;       /* ※縦横を同値に */
+	height: 100px;       /* ※縦横を同値に */
+}
 
+.innerS {
+	display: flex;
+	flex-direction: column;
+}
+
+.innerS p {
+	/* margin-left: 30px; */
+	margin-bottom: 30px;
+}
+
+.a {
+	margin-top: 40px;
+	margin-right: 40px;
+	text-align: right;
+}
 
 /* SEC04 PROJECT
 ------------------------------------------------------------*/
@@ -267,18 +288,29 @@ h2 {
 	clear: both;
 	overflow: hidden;
 	padding-bottom: 50px;
+	display: flex;
+	justify-content: center;
 }
 
-.article img {
-	float: left;
-	margin: 5px 20px 20px;
+.article-content {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 25%;
+	margin: 0 10px;
 }
 
-.article p {
-	margin-bottom: 20px;
+.article-content img {
+	border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  border: solid 0.1px;
+	width:  120px;       /* ※縦横を同値に */
+	height: 120px;       /* ※縦横を同値に */
+	align-items: center;
 }
 
-
+.article-content p {
+	margin: 20px 0;
+}
 
 /* SEC05 COMPANY
 ------------------------------------------------------------*/
@@ -307,6 +339,7 @@ h2 {
 	width: 100% !important;
 	height: 100% !important;
 	border: 0;
+	border-radius: 10px;
 }
 
 
@@ -603,7 +636,9 @@ h2 {
 #message .mu img {
 	margin: 32px 0px;
 	width: 100%;
-	height: auto
+	height: auto;
+  border-radius: 10px;  /* 角丸半径を50%にする(=円形にする) */
+  border: solid 0.1px;
 }
 
 #message .mu h3 {

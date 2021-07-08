@@ -174,10 +174,12 @@ if ($status == false) {
 						<p class="masseage_sub_title">
 							その国における動物の扱い方でわかる」
 						</p>
-						私が感銘を受けた言葉の一つです。
-						動物虐待、殺処分ともになくならない動物後進国の日本。
-						保護、啓発活動に尽力している人がいる一方で
-						思い切って仕事を辞め、この団体を立ち上げました。
+						<p>
+							私が感銘を受けた言葉の一つです。
+							動物虐待、殺処分ともになくならない動物後進国の日本。
+							保護、啓発活動に尽力している人がいる一方で
+							思い切って仕事を辞め、この団体を立ち上げました。
+						</p>
 					</div>
 
 					<div class="masseage_parent">
@@ -236,9 +238,20 @@ if ($status == false) {
 				</header>
 				<div class="innerS">
 
+					<p>里親を探しています</p>
+					<p>
+						譲渡会は毎月第２日曜日に行っております
+					</p>
+					<p>
+						譲渡会でお気に入りの仔が見つかったら、その後ご自宅で
+						２週間お世話をしていただきます。
+						双方に問題がないようでしたら、正式に譲渡となります。
+					</p>
+
+
 					<ul class="col4">
 						<li>
-							<p class="img"><img src="admin/transfer/<?= $result[0]['image'] ?>" width="168" height="168" alt=""></p>
+							<p class="img"><img class="sec03_img" src="admin/transfer/<?= $result[0]['image'] ?>" width="168" height="168" alt=""></p>
 						</li>
 						<li>
 							<p class="img"><img src="admin/transfer/<?= $result[1]['image'] ?>" width="168" height="168" alt=""></p>
@@ -247,7 +260,9 @@ if ($status == false) {
 							<p class="img"><img src="admin/transfer/<?= $result[2]['image'] ?>" width="168" height="168" alt=""></p>
 						</li>
 					</ul>
-					<a href="<?= link_transfer ?>">詳しくはこちら</a>
+					<div class="a">
+						<a href="<?= link_transfer ?>">詳しくはこちら</a>
+					</div>
 				</div>
 
 
@@ -261,19 +276,25 @@ if ($status == false) {
 				<div class="innerS">
 
 					<div class="article">
-						<img src="images/photo14.jpg" width="370" height="224" alt="">
-						<p>ホームページ・運営に関するお問い合わせはこちら</p>
-						<p>ホームページ・運営に関するお問い合わせはこちら</p>
-						<p>ホームページ・運営に関するお問い合わせはこちら</p>
-					</div>
-
-					<div class="article">
-						<img src="images/photo15.jpg" width="370" height="224" alt="">
-						<p>動物虐待に関するSOSはこちら</p>
-						<p>動物虐待に関するSOSはこちら</p>
-						<p>動物虐待に関するSOSはこちら</p>
+						<div class="article-content">
+							<img src="style-img/join-team.png">
+							<p>仲間になりたい</p>
+						</div>
+						<div class="article-content">
+							<img src="style-img/discipline.png">
+							<p>飼育に関する相談</p>
+						</div>
+						<div class="article-content">
+							<img src="style-img/sponsor.png">
+							<p>スポンサー希望</p>
+						</div>
+						<div class="article-content">
+							<img src="style-img/donate.png">
+							<p>寄付について</p>
+						</div>
 					</div>
 				</div>
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezP1JcBEXfFgDVtw7za2NVUN5ZzG41VcYLd_ndD9uPvayafg/viewform?embedded=true" width="100%" height="808" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 			</section>
 			<!-- // PROJECT -->
 			<!-- COMPANY -->
