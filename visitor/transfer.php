@@ -18,8 +18,8 @@ if ($status == false) {
   foreach ($result as $record) {
     // $output .= '<div>';
     $output .= '<div class="inu_box">';
-    $output .= '<div>';
-    $output .= "<img class='inu_img' src='../admin/transfer/{$record["image"]}' height=200px >";
+    $output .= '<div class="inu_img">';
+    $output .= "<img  src='../admin/transfer/{$record["image"]}' width=300px >";
     $output .= "</div>";
     $output .= "<div class='inu_text'>";
     $output .= "<p>名前:{$record["dogName"]}</p>";
@@ -247,9 +247,9 @@ if ($status == false) {
           <h2><span class="title">次の譲渡会</span></h2>
         </header>
         <div class="innerS">
-          <p>
-            譲渡会は毎月第２日曜日に行っております
-          </p>
+          <p class="p_1">譲渡会は</p>
+          <p class="p_2"><strong>毎月第 2 日曜日</strong></p>
+          <p class="p_3">に行っております</p>
         </div>
         <div class="innerS">
           <div class="inu_big_box">

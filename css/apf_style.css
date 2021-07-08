@@ -205,11 +205,11 @@ h2 {
 
 
 /* SEC01 Galler */
-
+.sos_title,
 .masseage_sub_title {
 	font-size: 1.5em;
 	font-weight: bold;
-	margin: 16px 0;
+	margin: 36px 0;
 	letter-spacing: 0.1em;
 }
 
