@@ -141,7 +141,7 @@ if ($status == false) {
 							<li><a id="logo_youtube" href="https://www.youtube.com/channel/UCsIFu-o1KP0ETTCrEUw36fw" target="_blank"><img src="images/logo_youtube2.png" width="30" height="30" alt="You Tube"></a></li>
 						</ul>
 						<ul id="develop">
-							<li><a href="#">
+							<li><a href="twitter.php" target="_brank">
 									<p>
 										#アニマルポリス
 									</p>
