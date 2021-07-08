@@ -25,9 +25,9 @@ if ($status == false) {
     $output .= "<p>名前:{$record["dogName"]}</p>";
     $output .= "<p>年齢:推定 {$record["dogAge"]}歳</p>";
     if ($record["sex"] == "オス") {
-      $output .= "<p>性別:<img src='../style-img/オス.png' width=20px height=20px></p>";
+      $output .= "<p><span class='material-icons' id='female'>female</span></p>";
     } else {
-      $output .= "<p>性別: <img src='../style-img/メス.png' height=20px></p>";
+      $output .= "<p><span class='material-icons' id='male'>male</span></p>";
     }
     $output .= "<p>避妊去勢手術:{$record["con_cas"]}</p>";
     $output .= "<p>フィラリア検査:{$record["firaria"]}</p>";
